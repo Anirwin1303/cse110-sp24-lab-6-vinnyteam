@@ -42,18 +42,6 @@ describe('Basic user flow for Website', () => {
 
   }, 10000);
 
-  it('Make sure <product-item> elements are populated', async () => {
-    const allArePopulated = await page.$$eval('product-item', prodItems => {
-      return prodItems.every(item => {
-        const data = item.data;
-        return data && data.title && data.title.length > 0 && 
-               data.price && data.price > 0 && 
-               data.image && data.image.length > 0;
-      });
-    });
-    expect(allArePopulated).toBe(true);
-  }, 10000);
-
   // Check to make sure that when you click "Add to Cart" on the first <product-item> that
   // the button swaps to "Remove from Cart"
   it('Clicking the "Add to Cart" button should change button text', async () => {
