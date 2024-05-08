@@ -77,7 +77,7 @@ function getNote(notes, id) {
 
 //Saves all notes to local storage
 function saveNotes(notes){
-    localStorage.setItem("notesApp-notes", JSON.stringify(notes));
+    localStorage.setItem("stickynotes-notes", JSON.stringify(notes));
 }
 
 //Deletes a single specific note with double click
